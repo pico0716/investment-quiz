@@ -1,34 +1,56 @@
 {
   "last_updated": "2026-06-17",
   "project": "investment-quiz",
-  "summary": "初心者向け株式投資スタイル診断ツール。10問→8タイプ診断→証券口座有無でCTA分岐。純粋HTML/CSS/JS、GitHub Pages無料配信予定。",
+  "summary": "初心者向け株式投資スタイル診断ツール。10問→8タイプ診断→証券口座有無でCTA分岐。純粋HTML/CSS/JS、GitHub Pages配信予定。",
 
   "phase_plan": [
-    { "phase": 1, "title": "設計 (Plan Mode/Opus)", "status": "completed", "note": "質問構成・タイプ分岐・データ構造を確定" },
-    { "phase": 2, "title": "骨組み実装 (Sonnet)", "status": "in_progress", "note": "画面遷移・アニメーション・スコアリングを仮データで実装" },
-    { "phase": 3, "title": "本文流し込み", "status": "pending", "note": "根拠データが揃ったらRESULTSの中身を本物に差し替え" },
-    { "phase": 4, "title": "仕上げ", "status": "pending", "note": "デザイン微調整・OGP設定・レスポンシブ確認" }
+    { "phase": 1, "title": "設計 (Plan Mode/Opus)",   "status": "completed",   "note": "質問構成・タイプ分岐・データ構造を確定" },
+    { "phase": 2, "title": "骨組み実装 (Sonnet)",      "status": "completed",   "note": "全5ファイル作成・スコアリング検証済み・GitHub pushまで完了" },
+    { "phase": 3, "title": "本文流し込み",              "status": "pending",     "note": "根拠データ（配当利回りなど）が揃ったらRESULTSの【仮】テキストを差し替え" },
+    { "phase": 4, "title": "仕上げ",                   "status": "pending",     "note": "デザイン微調整・OGP設定・レスポンシブ確認" }
   ],
 
-  "current_task": "フェーズ2: data.js / quiz.js / index.html / style.css を作成中",
+  "current_task": "GitHub Pages設定が未完了（下記ペンディング参照）",
 
-  "pending_decisions": [
-    "RESULTS の説明文・おすすめ銘柄は仮テキスト（【仮】表記）。実データ待ち。",
-    "CTAリンク先が未定（仮リンク #account-compare / #tech-article 等）。アフィリエイト確定後に差し替え。",
-    "口座ありの人向けCTA（テーマ解説記事）と口座なしの人向けCTA（口座開設アフィリエイト）の具体URL未定。"
+  "github": {
+    "repo": "https://github.com/pico0716/investment-quiz",
+    "pages_url": "https://pico0716.github.io/investment-quiz/",
+    "pages_status": "未設定（要対応）",
+    "pages_setup": "GitHubリポジトリ → Settings → Pages → Deploy from a branch → main / (root) → Save"
+  },
+
+  "pending_tasks": [
+    {
+      "id": 1,
+      "title": "GitHub Pages を有効化する",
+      "priority": "high",
+      "how": "https://github.com/pico0716/investment-quiz/settings/pages にアクセス → Source: Deploy from a branch → main/(root) → Save"
+    },
+    {
+      "id": 2,
+      "title": "RESULTS の【仮】テキストを実データに差し替え",
+      "priority": "low",
+      "note": "配当利回り・財務指標などの根拠データ準備後。すべて data.js の RESULTS 定数内で完結する設計。"
+    },
+    {
+      "id": 3,
+      "title": "CTAリンク先URLを確定する",
+      "priority": "low",
+      "note": "アフィリエイトリンクが決まったら data.js の RESULTS[タイプID].cta の url を書き換える"
+    }
   ],
 
-  "design_decisions": {
-    "axisA": "long（長期） / short（短期）。同点はlong優先。",
-    "axisB": "tech / infra / global / esg の4テーマ。同点優先順位 tech>global>infra>esg。",
-    "result_types": 8,
-    "screening_question": "Q10『証券口座はお持ちですか？』はスコアに影響せずCTA分岐のみに使う",
-    "data_swap_point": "実データ差し替えは全て data.js の RESULTS 定数内で完結する設計"
+  "file_structure": {
+    "index.html": "マークアップ・OGP枠（フェーズ4で画像URL設定）",
+    "style.css":  "スタイル・アニメーション（青基調・スマホファースト）",
+    "data.js":    "★差し替えポイント。QUESTIONS / RESULTS / CONFIG を定義",
+    "quiz.js":    "スコアリング・画面遷移・戻る・CTA分岐ロジック（dataに依存）",
+    "CLAUDE.md":  "設計経緯・ロジック全量・引き継ぎ情報"
   },
 
   "notes": [
-    "設計プラン原本: C:\\Users\\user\\.claude\\plans\\vivid-nibbling-key.md",
-    "スマホメイン操作・PC remote-control運用。再接続時は CLAUDE.md と work_session.json を読めば即文脈把握できる。",
-    "git新規リポジトリ。GitHubリモート作成・pushはユーザー確認後に実施。"
+    "スマホメイン操作・PC remote-control運用。",
+    "再接続時はこの work_session.json と CLAUDE.md を読めば即文脈把握できる。",
+    "Sonnet 4.6 で実装済み。設計フェーズは Opus 4.8 を使用。"
   ]
 }
