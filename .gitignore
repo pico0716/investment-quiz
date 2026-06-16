@@ -1,0 +1,10 @@
+# OS / エディタ
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 一時・ログ
+*.log
+_verify.js
+node_modules/
