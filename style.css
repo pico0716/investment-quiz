@@ -201,6 +201,59 @@ html, body {
   font-size: 0.96rem;
 }
 
+/* ---- SNS誘導ブロック ---- */
+.sns-block {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sns-mascot {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 4px;
+}
+
+.mascot-img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.speech-bubble {
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  border-radius: 14px 14px 14px 4px;
+  padding: 10px 14px;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  position: relative;
+}
+
+.btn-sns {
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 14px 18px;
+}
+
+.btn-x {
+  background: #000;
+  color: #fff;
+}
+.btn-x:hover { background: #222; }
+
+.btn-line {
+  background: #06c755;
+  color: #fff;
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none;
+}
+
 /* ---- フッター ---- */
 .site-footer {
   max-width: 560px;

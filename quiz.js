@@ -165,6 +165,19 @@
 
         <button class="btn btn-ghost" id="retryBtn">もう一度診断する</button>
 
+        <div class="sns-block">
+          <div class="sns-mascot">
+            <img src="./cat.png" alt="キャラクター" class="mascot-img" />
+            <div class="speech-bubble">気になることがあれば<br>気軽に相談してね！</div>
+          </div>
+          <a class="btn btn-sns btn-x" href="https://x.com/picopicomoto" target="_blank" rel="noopener">
+            X（旧Twitter）でフォロー・相談する
+          </a>
+          <a class="btn btn-sns btn-line" href="#line-placeholder" target="_blank" rel="noopener">
+            LINEで相談する（準備中）
+          </a>
+        </div>
+
         <p class="disclaimer">
           ※本診断は投資判断を保証するものではありません。
           実際の投資はご自身の判断と責任で行ってください。
