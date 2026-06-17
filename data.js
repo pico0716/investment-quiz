@@ -27,6 +27,12 @@ const CONFIG = {
       esg: 'ESG・社会貢献',
     },
   },
+  // SNS・外部リンク（差し替えポイント）
+  links: {
+    x: 'https://x.com/picopicomoto',
+    note: 'https://note.com/moto0716', // 記事公開後は記事URLに変更
+    line: null, // LINE公式アカウント確定後に設定
+  },
 };
 
 const QUESTIONS = [

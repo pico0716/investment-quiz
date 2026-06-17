@@ -80,6 +80,34 @@ RESULTS の説明文・おすすめ銘柄・CTAリンクは現在すべて仮テ
 
 ---
 
+## 他プロジェクトとの連携
+
+このプロジェクトは以下の2プロジェクトと連携している。**他プロジェクトのファイルは読み取り専用（編集しない）。**
+
+### note-fukugyou（`C:\Users\user\note-fukugyou`）
+- X（@picopicomoto）×note（note.com/moto0716）のコンテンツ販売プロジェクト
+- PPC（ピコ式ポストClaudeライティング）ブランド確立中
+- **investment-quizからの導線**: 結果画面の「noteで投資の基礎を読む」ボタン
+- **引き渡し用ドラフト**: `drafts/note_article_quiz.md`・`drafts/x_post_quiz_announce.md`
+- noteのURLを記事公開後に差し替える場所: `data.js` の `CONFIG.links.note`
+
+### threads-affiliate（`C:\Users\user\threads-affiliate`）
+- 楽天アフィリエイト×Threads 自動投稿システム（毎日2回稼働中）
+- 直接の連携はないが、投資テーマの投稿とターゲット層が重なる
+
+### キャラクター統一
+- `cat.png`（白黒猫）はXアイコン・note・全プロジェクト共通のキャラクター
+- note-fukugyouの `work_session.json` にも「猫キャラに変更（未着手）」のタスクがある
+- 画像ファイルのパス: `C:\Users\user\investment-quiz\cat.png`
+
+### 他プロジェクトへの情報共有方法
+- このプロジェクトの最新状態は `work_session.json` に記録
+- note-fukugyouセッションで「investment-quizの状況は？」と聞かれたら
+  `C:\Users\user\investment-quiz\work_session.json` を読んで答える
+- 引き渡し用ドラフトは `drafts/` フォルダに格納
+
+---
+
 ## 新しいチャットを開いたときの最初の指示文
 
 このフォルダで新しいClaudeセッションを起動したら、以下をそのまま貼り付けて送信する：

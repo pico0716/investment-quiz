@@ -240,6 +240,12 @@ html, body {
   padding: 14px 18px;
 }
 
+.btn-note {
+  background: #323232;
+  color: #fff;
+}
+.btn-note:hover { background: #111; }
+
 .btn-x {
   background: #000;
   color: #fff;
@@ -249,10 +255,8 @@ html, body {
 .btn-line {
   background: #06c755;
   color: #fff;
-  opacity: 0.6;
-  cursor: default;
-  pointer-events: none;
 }
+.btn-line:hover { filter: brightness(0.92); }
 
 /* ---- フッター ---- */
 .site-footer {

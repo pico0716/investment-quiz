@@ -1,56 +1,87 @@
 {
   "last_updated": "2026-06-17",
   "project": "investment-quiz",
-  "summary": "初心者向け株式投資スタイル診断ツール。10問→8タイプ診断→証券口座有無でCTA分岐。純粋HTML/CSS/JS、GitHub Pages配信予定。",
+  "summary": "初心者向け株式投資スタイル診断ツール。10問→8タイプ診断→証券口座有無でCTA分岐。純粋HTML/CSS/JS、GitHub Pages配信中。",
 
   "phase_plan": [
     { "phase": 1, "title": "設計 (Plan Mode/Opus)",   "status": "completed",   "note": "質問構成・タイプ分岐・データ構造を確定" },
     { "phase": 2, "title": "骨組み実装 (Sonnet)",      "status": "completed",   "note": "全5ファイル作成・スコアリング検証済み・GitHub pushまで完了" },
-    { "phase": 3, "title": "本文流し込み",              "status": "pending",     "note": "根拠データ（配当利回りなど）が揃ったらRESULTSの【仮】テキストを差し替え" },
-    { "phase": 4, "title": "仕上げ",                   "status": "pending",     "note": "デザイン微調整・OGP設定・レスポンシブ確認" }
+    { "phase": 3, "title": "本文流し込み",              "status": "completed",   "note": "description・recommend 全8タイプ仮テキスト除去済み。CTAリンクURLのみ未確定。" },
+    { "phase": 4, "title": "仕上げ",                   "status": "in_progress", "note": "猫キャラ・SNS誘導実装済み。OGP画像・レスポンシブ最終確認が残り。" }
   ],
 
-  "current_task": "GitHub Pages設定が未完了（下記ペンディング参照）",
+  "current_task": "フェーズ4仕上げ中（OGP・レスポンシブ確認が残り）",
 
   "github": {
     "repo": "https://github.com/pico0716/investment-quiz",
     "pages_url": "https://pico0716.github.io/investment-quiz/",
-    "pages_status": "未設定（要対応）",
-    "pages_setup": "GitHubリポジトリ → Settings → Pages → Deploy from a branch → main / (root) → Save"
+    "pages_status": "公開済み・稼働中"
   },
 
   "pending_tasks": [
     {
       "id": 1,
-      "title": "GitHub Pages を有効化する",
+      "title": "CTAリンクURLを確定する（アフィリエイトリンク）",
       "priority": "high",
-      "how": "https://github.com/pico0716/investment-quiz/settings/pages にアクセス → Source: Deploy from a branch → main/(root) → Save"
+      "note": "data.js の RESULTS[タイプID].cta.url を書き換える。noAccount側は全タイプ共通URLでOK。"
     },
     {
       "id": 2,
-      "title": "RESULTS の【仮】テキストを実データに差し替え",
-      "priority": "low",
-      "note": "配当利回り・財務指標などの根拠データ準備後。すべて data.js の RESULTS 定数内で完結する設計。"
+      "title": "noteリンクを記事URLに差し替える",
+      "priority": "medium",
+      "note": "note記事公開後に data.js の CONFIG.links.note を記事URLに変更する"
     },
     {
       "id": 3,
-      "title": "CTAリンク先URLを確定する",
+      "title": "LINEリンクを設定する",
       "priority": "low",
-      "note": "アフィリエイトリンクが決まったら data.js の RESULTS[タイプID].cta の url を書き換える"
+      "note": "LINE公式アカウント確定後に data.js の CONFIG.links.line に設定する"
+    },
+    {
+      "id": 4,
+      "title": "OGP画像を設定する",
+      "priority": "low",
+      "note": "index.html の og:image にSNSシェア用画像URLを設定する"
     }
   ],
 
   "file_structure": {
     "index.html": "マークアップ・OGP枠（フェーズ4で画像URL設定）",
     "style.css":  "スタイル・アニメーション（青基調・スマホファースト）",
-    "data.js":    "★差し替えポイント。QUESTIONS / RESULTS / CONFIG を定義",
-    "quiz.js":    "スコアリング・画面遷移・戻る・CTA分岐ロジック（dataに依存）",
-    "CLAUDE.md":  "設計経緯・ロジック全量・引き継ぎ情報"
+    "data.js":    "★差し替えポイント。QUESTIONS / RESULTS / CONFIG（links含む）を定義",
+    "quiz.js":    "スコアリング・画面遷移・戻る・CTA分岐・SNSブロックロジック",
+    "cat.png":    "キャラクター画像（X/note共通アイコン）",
+    "CLAUDE.md":  "設計経緯・ロジック全量・他プロジェクト連携情報",
+    "drafts/x_post_quiz_announce.md": "X投稿告知ドラフト（note-fukugyouへ引き渡し用）",
+    "drafts/note_article_quiz.md":    "note記事ドラフト（note-fukugyouへ引き渡し用）"
+  },
+
+  "cross_project": {
+    "note-fukugyou": {
+      "path": "C:\\Users\\user\\note-fukugyou",
+      "relation": "結果画面からnoteへ誘導。告知ドラフトを drafts/ に用意済み。",
+      "handover_files": [
+        "drafts/note_article_quiz.md",
+        "drafts/x_post_quiz_announce.md"
+      ],
+      "note_link_location": "data.js の CONFIG.links.note（記事公開後に差し替え）"
+    },
+    "threads-affiliate": {
+      "path": "C:\\Users\\user\\threads-affiliate",
+      "relation": "投資テーマの投稿と読者層が重なる。直接連携なし。",
+      "status": "正常稼働中（毎日07:00/21:00 JST に楽天アフィリエイト投稿）"
+    },
+    "cat_character": {
+      "file": "cat.png",
+      "usage": "Xアイコン・診断ツール結果画面・全プロジェクト共通キャラクター",
+      "note_fukugyou_task": "アイコン・プロフィールを猫キャラに変更（note-fukugyou pending task #5）"
+    }
   },
 
   "notes": [
     "スマホメイン操作・PC remote-control運用。",
     "再接続時はこの work_session.json と CLAUDE.md を読めば即文脈把握できる。",
-    "Sonnet 4.6 で実装済み。設計フェーズは Opus 4.8 を使用。"
+    "Sonnet 4.6 で実装済み。設計フェーズは Opus 4.8 を使用。",
+    "他プロジェクトのファイルは読み取りのみ・編集不可。引き渡しは drafts/ フォルダ経由。"
   ]
 }

@@ -170,12 +170,13 @@
             <img src="./cat.png" alt="キャラクター" class="mascot-img" />
             <div class="speech-bubble">気になることがあれば<br>気軽に相談してね！</div>
           </div>
-          <a class="btn btn-sns btn-x" href="https://x.com/picopicomoto" target="_blank" rel="noopener">
+          <a class="btn btn-sns btn-note" href="${encodeURI(CONFIG.links.note)}" target="_blank" rel="noopener">
+            📝 noteで投資の基礎を読む
+          </a>
+          <a class="btn btn-sns btn-x" href="${encodeURI(CONFIG.links.x)}" target="_blank" rel="noopener">
             X（旧Twitter）でフォロー・相談する
           </a>
-          <a class="btn btn-sns btn-line" href="#line-placeholder" target="_blank" rel="noopener">
-            LINEで相談する（準備中）
-          </a>
+          ${CONFIG.links.line ? `<a class="btn btn-sns btn-line" href="${encodeURI(CONFIG.links.line)}" target="_blank" rel="noopener">LINEで相談する</a>` : ''}
         </div>
 
         <p class="disclaimer">
