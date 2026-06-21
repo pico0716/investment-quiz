@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-17",
+  "last_updated": "2026-06-22",
   "project": "investment-quiz",
   "summary": "初心者向け株式投資スタイル診断ツール。10問→8タイプ診断→証券口座有無でCTA分岐。純粋HTML/CSS/JS、GitHub Pages配信中。",
 
@@ -10,7 +10,7 @@
     { "phase": 4, "title": "仕上げ",                   "status": "in_progress", "note": "猫キャラ・SNS誘導実装済み。OGP画像・レスポンシブ最終確認が残り。" }
   ],
 
-  "current_task": "フェーズ4仕上げ中（OGP・レスポンシブ確認が残り）",
+  "current_task": "SBI証券アフィリエイト審査待ち。承認後にdata.jsのCTAリンクを差し替える。",
 
   "github": {
     "repo": "https://github.com/pico0716/investment-quiz",
@@ -18,29 +18,72 @@
     "pages_status": "公開済み・稼働中"
   },
 
+  "affiliate": {
+    "asp": {
+      "A8": {
+        "status": "登録済み",
+        "media": {
+          "X": "ウェブサイトとして登録済み（SNS選択肢なし）",
+          "note": "登録済み"
+        },
+        "note": "証券会社の案件なし。投資系はアクセストレードがメイン。"
+      },
+      "accesstrade": {
+        "status": "登録済み・審査通過",
+        "media": {
+          "investment-quiz": "承認済み",
+          "note": "記事がないため否決。記事公開後に再申請予定。"
+        },
+        "programs": {
+          "SBI証券": "提携申請済み・審査待ち",
+          "楽天証券": "アクセストレードに案件なし。バリューコマースで要確認。"
+        }
+      }
+    },
+    "next_action": "SBI証券の審査通過後、data.js の RESULTS[全タイプ].cta.noAccount.url にリンクを貼る"
+  },
+
   "pending_tasks": [
     {
       "id": 1,
-      "title": "CTAリンクURLを確定する（アフィリエイトリンク）",
+      "title": "SBI証券アフィリエイトリンクをdata.jsに貼る",
       "priority": "high",
-      "note": "data.js の RESULTS[タイプID].cta.url を書き換える。noAccount側は全タイプ共通URLでOK。"
+      "status": "審査待ち",
+      "note": "承認メール来たら data.js の RESULTS[タイプID].cta.noAccount.url を全タイプ共通で差し替える"
     },
     {
       "id": 2,
-      "title": "noteリンクを記事URLに差し替える",
+      "title": "楽天証券アフィリエイトリンクを探す",
       "priority": "medium",
-      "note": "note記事公開後に data.js の CONFIG.links.note を記事URLに変更する"
+      "status": "pending",
+      "note": "バリューコマース（https://www.valuecommerce.ne.jp/）に登録して確認。SBI通過後でOK。"
     },
     {
       "id": 3,
-      "title": "LINEリンクを設定する",
-      "priority": "low",
-      "note": "LINE公式アカウント確定後に data.js の CONFIG.links.line に設定する"
+      "title": "noteリンクを記事URLに差し替える",
+      "priority": "medium",
+      "status": "pending",
+      "note": "note記事公開後に data.js の CONFIG.links.note を記事URLに変更する"
     },
     {
       "id": 4,
+      "title": "アクセストレードnote媒体を再申請",
+      "priority": "medium",
+      "status": "pending",
+      "note": "note-fukugyouで記事を2〜3本公開してから再申請。drafts/note_article_quiz.md を元に記事作成予定。"
+    },
+    {
+      "id": 5,
+      "title": "LINEリンクを設定する",
+      "priority": "low",
+      "status": "pending",
+      "note": "LINE公式アカウント確定後に data.js の CONFIG.links.line に設定する"
+    },
+    {
+      "id": 6,
       "title": "OGP画像を設定する",
       "priority": "low",
+      "status": "pending",
       "note": "index.html の og:image にSNSシェア用画像URLを設定する"
     }
   ],
@@ -64,7 +107,8 @@
         "drafts/note_article_quiz.md",
         "drafts/x_post_quiz_announce.md"
       ],
-      "note_link_location": "data.js の CONFIG.links.note（記事公開後に差し替え）"
+      "note_link_location": "data.js の CONFIG.links.note（記事公開後に差し替え）",
+      "next_action": "note記事2〜3本公開 → アクセストレードnote媒体を再申請"
     },
     "threads-affiliate": {
       "path": "C:\\Users\\user\\threads-affiliate",
@@ -82,6 +126,7 @@
     "スマホメイン操作・PC remote-control運用。",
     "再接続時はこの work_session.json と CLAUDE.md を読めば即文脈把握できる。",
     "Sonnet 4.6 で実装済み。設計フェーズは Opus 4.8 を使用。",
-    "他プロジェクトのファイルは読み取りのみ・編集不可。引き渡しは drafts/ フォルダ経由。"
+    "他プロジェクトのファイルは読み取りのみ・編集不可。引き渡しは drafts/ フォルダ経由。",
+    "SBI証券とユーザー本人が使用中（楽天証券も使用中）。自身の体験として訴求できる。"
   ]
 }
