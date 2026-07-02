@@ -30,11 +30,6 @@
             "type": "command",
             "command": "memanto agent activate investment-quiz",
             "timeout": 30
-          },
-          {
-            "type": "command",
-            "command": "memanto memory sync --project-dir .",
-            "timeout": 30
           }
         ]
       }
