@@ -167,7 +167,7 @@
 
         <div class="sns-block">
           <div class="sns-mascot">
-            <img src="./cat.png" alt="キャラクター" class="mascot-img" />
+            <img src="./assets/cat.png" alt="キャラクター" class="mascot-img" />
             <div class="speech-bubble">気になることがあれば<br>気軽に相談してね！</div>
           </div>
           <a class="btn btn-sns btn-note" href="${encodeURI(CONFIG.links.note)}" target="_blank" rel="noopener">
