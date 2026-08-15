@@ -8,3 +8,6 @@ Thumbs.db
 *.log
 _verify.js
 node_modules/
+
+# Stopフックが毎ターン上書きする継続用スナップショット（コミット対象外）
+context/session_state.md

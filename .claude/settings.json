@@ -8,7 +8,6 @@
   "hooks": {
     "UserPromptSubmit": [
       {
-        "matcher": "おはよう",
         "hooks": [
           {
             "type": "command",
@@ -17,14 +16,13 @@
         ]
       }
     ],
-    "SessionStart": [
+    "Stop": [
       {
-        "matcher": "startup",
         "hooks": [
           {
             "type": "command",
-            "command": "memanto agent activate investment-quiz",
-            "timeout": 30
+            "command": "powershell -File .claude/hooks/save_state.ps1",
+            "timeout": 20
           }
         ]
       }
