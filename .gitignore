@@ -11,3 +11,4 @@ node_modules/
 
 # Stopフックが毎ターン上書きする継続用スナップショット（コミット対象外）
 context/session_state.md
+.claude/settings.local.json

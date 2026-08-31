@@ -55,8 +55,8 @@
       "id": 2,
       "title": "楽天証券アフィリエイトリンクを探す",
       "priority": "medium",
-      "status": "pending",
-      "note": "バリューコマース（https://www.valuecommerce.ne.jp/）に登録して確認。SBI通過後でOK。"
+      "status": "審査待ち",
+      "note": "バリューコマース登録済み（2026-06-24）・審査待ち。承認後に楽天証券案件を探してdata.jsに設定。"
     },
     {
       "id": 3,
